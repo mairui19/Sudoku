@@ -15,6 +15,7 @@ namespace SolveurORTools
             var solution1 = solveur.ResoudreSudoku(sudokus[0]);
             Console.WriteLine(solution1);
             Console.Read();
+
         }
 
     }
