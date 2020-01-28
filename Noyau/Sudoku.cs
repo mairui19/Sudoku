@@ -9,6 +9,19 @@ namespace Noyau
     public class Sudoku
     {
         private static readonly int[] Indices = Enumerable.Range(0, 9).ToArray();
+       
+
+        public Sudoku()
+        {
+         
+        }
+
+        public Sudoku(List<int> lsol)
+        {
+            this.Cells = lsol;
+        }
+
+
 
         // The List property makes it easier to manipulate cells,
         public List<int> Cells { get; set; } = Enumerable.Repeat(0, 81).ToList();
@@ -66,11 +79,17 @@ namespace Noyau
             return output.ToString();
         }
 
+
         /// <summary>
         /// Parses a single Sudoku
         /// </summary>
         /// <param name="sudokuAsString">the string representing the sudoku</param>
         /// <returns>the parsed sudoku</returns>
+
+        public int GetCell(int x, int y)
+        {
+            return Cells[(9 * x) + y];
+        }
         public static Sudoku Parse(string sudokuAsString)
         {
             return ParseMulti(new[] { sudokuAsString })[0];
