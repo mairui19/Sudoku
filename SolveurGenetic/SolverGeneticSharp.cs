@@ -19,7 +19,7 @@ namespace SolveurGenetic
     {
         public Sudoku ResoudreSudoku(Sudoku s)
         {
-            var populationSize = 100000;
+            var populationSize = 20;
 
             var sudokuChromosome = new SudokuPermutationsChromosome(s);
 
@@ -51,8 +51,6 @@ namespace SolveurGenetic
                 })
 
             };
-
-
 
             ga.Start();
 
@@ -219,128 +217,7 @@ namespace SolveurGenetic
 
     /// </summary>
 
-    public class SudokuCellsChromosome : ChromosomeBase, ISudokuChromosome
-
-    {
-
-        /// <summary>
-
-        /// The target sudoku board to solve
-
-        /// </summary>
-
-        private readonly Sudoku _targetSudoku;
-
-
-
-        public SudokuCellsChromosome() : this(null)
-
-        {
-
-        }
-
-
-
-        /// <summary>
-
-        /// Constructor that accepts a Sudoku to solve
-
-        /// </summary>
-
-        /// <param name="targetSudoku">the target sudoku to solve</param>
-
-        public SudokuCellsChromosome(Sudoku targetSudoku) : base(81)
-
-        {
-
-            _targetSudoku = targetSudoku;
-
-            for (int i = 0; i < Length; i++)
-
-            {
-
-                ReplaceGene(i, GenerateGene(i));
-
-            }
-
-        }
-
-
-
-        /// <summary>
-
-        /// Generates genes with digits for each index within the 81 Sudoku cells
-
-        /// </summary>
-
-        /// <param name="geneIndex"></param>
-
-        /// <returns>a gene with a digit for the corresponding cell index</returns>
-
-        public override Gene GenerateGene(int geneIndex)
-
-        {
-
-            //If a target mask exist and has a digit for the cell, we use it.
-
-            if (_targetSudoku != null && _targetSudoku.Cells[geneIndex] != 0)
-
-            {
-
-                return new Gene(_targetSudoku.Cells[geneIndex]);
-
-            }
-
-            var rnd = RandomizationProvider.Current;
-
-            // otherwise we use a random digit.
-
-            return new Gene(rnd.GetInt(1, 10));
-
-        }
-
-
-
-        public override IChromosome CreateNew()
-
-        {
-
-            return new SudokuCellsChromosome(_targetSudoku);
-
-        }
-
-
-
-        /// <summary>
-
-        /// Builds a single Sudoku from the 81 genes
-
-        /// </summary>
-
-        /// <returns>A Sudoku board built from the 81 genes</returns>
-
-        public IList<Sudoku> GetSudokus()
-
-        {
-
-            var sudoku = new Sudoku();
-            sudoku.Cells=this.GetGenes().Select(g => (int)g.Value).ToList();
-
-            return new List<Sudoku>(new[] { sudoku });
-
-        }
-
-    }
-
-
-    /// <summary>
-
-    /// This more elaborated chromosome manipulates rows instead of cells, and each of its 9 gene holds an integer for the index of the row's permutation amongst all that respect the target mask.
-
-    /// Permutations are computed once when a new Sudoku is encountered, and stored in a static dictionary for further reference.
-
-    /// </summary>
-
+ 
     public class SudokuPermutationsChromosome : ChromosomeBase, ISudokuChromosome
 
     {
@@ -780,12 +657,6 @@ namespace SolveurGenetic
                 (t1, t2) => (IList<T>)t1.Concat(new T[] { t2 }).ToList()).ToList();
 
         }
-
-
-
-
-
-
 
     }
 
