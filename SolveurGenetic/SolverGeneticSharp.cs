@@ -19,7 +19,7 @@ namespace SolveurGenetic
     {
         public Sudoku ResoudreSudoku(Sudoku s)
         {
-            var populationSize = 20;
+            var populationSize = 1000;
 
             var sudokuChromosome = new SudokuPermutationsChromosome(s);
 
