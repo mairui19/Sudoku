@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolveurLiensDansants", "Sol
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolveurGenetic", "SolveurGenetic\SolveurGenetic.csproj", "{1C1B6FF7-5838-4DBD-BE82-EC969E85B798}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolveurN", "SolveurN\SolveurN.csproj", "{0F673212-72E9-4183-966C-822A1D014ED5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolveurORTools", "SolveurORTools\SolveurORTools.csproj", "{04A49D64-4241-464A-871A-5F71D0572447}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,11 @@ Global
 		{1C1B6FF7-5838-4DBD-BE82-EC969E85B798}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C1B6FF7-5838-4DBD-BE82-EC969E85B798}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C1B6FF7-5838-4DBD-BE82-EC969E85B798}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0F673212-72E9-4183-966C-822A1D014ED5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F673212-72E9-4183-966C-822A1D014ED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F673212-72E9-4183-966C-822A1D014ED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F673212-72E9-4183-966C-822A1D014ED5}.Release|Any CPU.Build.0 = Release|Any CPU
+EndGlobalSection
+		{04A49D64-4241-464A-871A-5F71D0572447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04A49D64-4241-464A-871A-5F71D0572447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04A49D64-4241-464A-871A-5F71D0572447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04A49D64-4241-464A-871A-5F71D0572447}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
