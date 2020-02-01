@@ -9,7 +9,7 @@ namespace SolverN
 {
     public class Norvig : ISudokuSolveur
     {
-
+// variables
         static string rows = "ABCDEFGHI";
         static string cols = "123456789";
         static string digits = "123456789";
