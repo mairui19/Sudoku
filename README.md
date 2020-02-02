@@ -10,8 +10,8 @@ Le premier objectif est de créer une application permettant de charger et affic
 Créez une application de Console .Net Core.
 Créez une classe Sudoku permettant la prise en charge de l’état d’un Sudoku à résoudre ou en cours de résolution.
 
-Une fois les solveurs correctement traduit en C# ou python et les codes remontés jusqu'à la branche principal l'objectif a été de réaliser un benchmark, pour cela, la librairie BenchmarkDotNet a été utilisée.
-https://github.com/dotnet/BenchmarkDotNet/blob/master/docs/logo/logo-wide.png
+Une fois les solveurs correctement traduit en C# ou python et les codes remontés jusqu'à la branche principale le code est affiché via un  benchmark, pour cela, la librairie BenchmarkDotNet est utilisée.
+![Alt text] https://github.com/dotnet/BenchmarkDotNet/blob/master/docs/logo/logo-wide.png
 Ainsi chaque solveur de Sudoku devait être capable de résoudre 3 Sudoku à difficulté variable (sauf pour la résolution par réseau de neurones convolués qui possède une large base de Sudoku pour s'entraîner).
 Par exemple avant résolution, un Sodoku (ici le facile) se présentait de la sorte :
-https://scontent-cdg2-1.xx.fbcdn.net/v/t1.15752-9/83292730_183000729428676_336940759896817664_n.png?_nc_cat=104&_nc_ohc=TvxqNk8W4zcAX-z0MSQ&_nc_ht=scontent-cdg2-1.xx&oh=8d8ad95e7943279c94dc80c4682bf5d2&oe=5EC656F4
+
