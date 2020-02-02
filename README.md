@@ -14,5 +14,5 @@ Une fois les solveurs correctement traduit en C# ou python et les codes remonté
 ![Alt text] https://github.com/dotnet/BenchmarkDotNet/blob/master/docs/logo/logo-wide.png
 Ainsi chaque solveur de Sudoku devait être capable de résoudre 3 Sudoku à difficulté variable (sauf pour la résolution par réseau de neurones convolués qui possède une large base de Sudoku pour s'entraîner).
 Par exemple avant résolution, un Sodoku (ici le facile) se présentait de la sorte :
-![stack Overflow](http://lmsotfy.com/so.png) 
+![stack Overflo](http://lmsotfy.com/so.png) 
 
