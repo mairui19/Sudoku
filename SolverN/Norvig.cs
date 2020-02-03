@@ -195,7 +195,7 @@ namespace SolverN
         }
 
 
-        // fonction qui resoud le sudoku 
+        // fonction qui resoud le sudoku
 
         public Sudoku ResoudreSudoku(Sudoku s)
         {
