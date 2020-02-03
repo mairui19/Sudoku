@@ -5,7 +5,7 @@ using Noyau;
 
 namespace SolveurLiensDansants
 {
-    class SolveurLD : ISudokuSolveur
+    public class SolveurLD : ISudokuSolveur
     {
         public Sudoku ResoudreSudoku(Sudoku s)
         {

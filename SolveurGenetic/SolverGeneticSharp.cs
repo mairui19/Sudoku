@@ -15,7 +15,7 @@ using Noyau;
 
 namespace SolveurGenetic
 {
-    class SolverGeneticSharp : ISudokuSolveur
+    public class SolverGeneticSharp : ISudokuSolveur
     {
         public Sudoku ResoudreSudoku(Sudoku s)
         {
