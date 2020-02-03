@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Sudoku\Noyau\Noyau.csproj" />
+    <ProjectReference Include="..\..\Sudoku\SolveurGenetic\SolveurGenetic.csproj" />
+    <ProjectReference Include="..\..\Sudoku\SolveurLiensDansants\SolveurLiensDansants.csproj" />
+    <ProjectReference Include="..\..\Sudoku\SolveurORTools\SolveurORTools.csproj" />
+  </ItemGroup>
+
+</Project>

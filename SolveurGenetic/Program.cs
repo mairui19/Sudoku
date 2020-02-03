@@ -3,7 +3,7 @@ using System;
 using System.IO;
 
 namespace SolveurGenetic
-{
+{   // class program
     class Program
     {
         static void Main(string[] args)

@@ -11,7 +11,7 @@ namespace Noyau
         private static readonly int[] Indices = Enumerable.Range(0, 9).ToArray();
        
 
-        public Sudoku()
+        public Sudoku(int[] grid)
         {
          
         }
@@ -19,6 +19,10 @@ namespace Noyau
         public Sudoku(List<int> lsol)
         {
             this.Cells = lsol;
+        }
+
+        public Sudoku()
+        {
         }
 
 
@@ -98,6 +102,10 @@ namespace Noyau
         public static Sudoku Parse(string sudokuAsString)
         {
             return ParseMulti(new[] { sudokuAsString })[0];
+        }
+        public void SetCell(int x, int y, int value)
+        {
+            Cells[(9 * x) + y] = value;
         }
 
         /// <summary>

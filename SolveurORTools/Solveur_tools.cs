@@ -26,13 +26,13 @@ namespace SolveurORTools
                     tab_s[i][j] = model.NewIntVar(1, 9, "grid" + "(" + i + "," + j + ")");
                 }
             }
-
-            //constraints all differents on rows 
+            // The different contraints
+            // All differents on rows 
             for (int i = 0; i < tab_s.Length; i++)
             {
                 model.AddAllDifferent(tab_s[i]);
             }
-            // Constraints all differents on colums 
+            // All differents on columns 
             IntVar[] tpm = new IntVar[9];
             for (int j = 0; j < tab_s[0].Length; j++)
             {
@@ -44,7 +44,7 @@ namespace SolveurORTools
                 Array.Clear(tpm, 0, tpm.Length);
             }
 
-            // Constraint all differents on cells 
+            // All differents on cells 
             List<IntVar> ls = new List<IntVar>();
             for (int i = 0; i < 7; i += 3)
             {
@@ -63,7 +63,7 @@ namespace SolveurORTools
                 }
             }
 
-            //initial Value
+            // Initial Value
             for (int i = 0; i < 9; i++)
             {
                 for (int j = 0; j < 9; j++)
@@ -75,7 +75,7 @@ namespace SolveurORTools
                 }
             }
 
-            //creation of the Solver 
+            // Creation of the Solver 
             CpSolver solver = new CpSolver();
             CpSolverStatus status = solver.Solve(model);
             List<int> lsol = new List<int>();
